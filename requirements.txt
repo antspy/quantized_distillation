@@ -1,0 +1,5 @@
+torch==0.3
+torchvision
+numpy
+scipy
+torchtext==0.1.1
