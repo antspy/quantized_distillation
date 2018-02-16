@@ -1,10 +1,8 @@
 #  Model compression via distillation and quantization
 
-This code has been written to experiment with quantized distillation and differentiable quantization, techniques developed in our paper "Model compression via distillation and quantization", ICLR 2018.
+This code has been written to experiment with quantized distillation and differentiable quantization, techniques developed in our paper ["Model compression via distillation and quantization"](https://arxiv.org/abs/1802.05668).
 
 The code is written in [Pytorch](http://pytorch.org/) using Python 3.6. It is not backward compatible with Python2.x
-
-*Note* This code will not be supported apart from minor bug corrections.
 
 # Getting started
 
@@ -17,16 +15,16 @@ This is a short explanation of the contents of each folder:
  - *datasets* is a package that automatically downloads and process several datasets, including CIFAR10, PennTreeBank, WMT2013, etc.
  - *quantization* contains the quantization functions that are used.
  - *perl_scripts* contains some perl scripts taken from the [moses project](https://github.com/moses-smt/mosesdecoder) to help with the translation task.
- - *onmt* contains the code from [openNMT-py project](https://github.com/OpenNMT/OpenNMT-py). It is slightly modified to make it consistent with my project.
+ - *onmt* contains the code from [openNMT-py project](https://github.com/OpenNMT/OpenNMT-py). It is slightly modified to make it consistent with our codebase.
  - *helpers* contains some functions used across the whole project.
- - *model_manager.py* contains a useful class that implements common I/O operations on saved models. It is especially useful when training multiple similar models, as it keeps track of the options with which the models were trained and the results of each training run.
+ - *model_manager.py* contains a useful class that implements common I/O operations on saved models. It is especially useful when training multiple similar models, as it keeps track of the options with which the models were trained and the results of each training run. *Note*: it does not support concurrent access to the same files. I am working on a version that does, if you are interested, drop me a line.
  - First-level files like [cifar10_test.py](cifar10_test.py) are the main files that implement the experiments using the rest of the codebase.
  - Other folders contain model definitions and training routines, depending on the task.
 
 ### Running the code
 
 The first thing to do is to import some dataset and create the train and test set loaders.
-Define a folder where you want to save all your datasets; they will be automatically downloaded and processed in the folder specified. The following example will show how to load the CIFAR10 dataset, create and train a model.
+Define a folder where you want to save all your datasets; they will be automatically downloaded and processed in the folder specified. The following example shows how to load the CIFAR10 dataset, create and train a model.
 ```python
 import dataset
 dataset.BASE_DATA_FOLDER = '/home/saved_datasets'
@@ -83,6 +81,8 @@ This is the general structure necessary to use the code. For more examples, plea
 
 # License
 
-The code is licensed under the MIT Licence. See the [LICENSE.md](LICENSE.md) file for detail. If you want to use this code, please cite the paper:
+The code is licensed under the MIT Licence. See the [LICENSE.md](LICENSE.md) file for detail.
 
 # Acknowledgements
+
+We would like to thank Ce Zhang  (ETH Zürich), Hantian Zhang (ETH Zürich) and Martin Jaggi (EPFL) for their support with experiments and valuable feedback.
