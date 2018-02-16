@@ -17,7 +17,7 @@ This is a short explanation of the contents of each folder:
  - *perl_scripts* contains some perl scripts taken from the [moses project](https://github.com/moses-smt/mosesdecoder) to help with the translation task.
  - *onmt* contains the code from [openNMT-py project](https://github.com/OpenNMT/OpenNMT-py). It is slightly modified to make it consistent with our codebase.
  - *helpers* contains some functions used across the whole project.
- - *model_manager.py* contains a useful class that implements common I/O operations on saved models. It is especially useful when training multiple similar models, as it keeps track of the options with which the models were trained and the results of each training run. *Note*: it does not support concurrent access to the same files. I am working on a version that does, if you are interested, drop me a line.
+ - *model_manager.py* contains a useful class that implements common I/O operations on saved models. It is especially useful when training multiple similar models, as it keeps track of the options with which the models were trained and the results of each training run. *Note*: it does not support concurrent access to the same files. I am working on a version that does; if you are interested, drop me a line.
  - First-level files like [cifar10_test.py](cifar10_test.py) are the main files that implement the experiments using the rest of the codebase.
  - Other folders contain model definitions and training routines, depending on the task.
 
