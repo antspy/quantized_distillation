@@ -2,6 +2,8 @@
 
 This code has been written to experiment with quantized distillation and differentiable quantization, techniques developed in our paper ["Model compression via distillation and quantization"](https://arxiv.org/abs/1802.05668).
 
+If you find this code useful in your research, please cite the paper.
+
 The code is written in [Pytorch](http://pytorch.org/) using Python 3.6. It is not backward compatible with Python2.x
 
 # Getting started
