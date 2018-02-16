@@ -2,7 +2,21 @@
 
 This code has been written to experiment with quantized distillation and differentiable quantization, techniques developed in our paper ["Model compression via distillation and quantization"](https://arxiv.org/abs/1802.05668).
 
-If you find this code useful in your research, please cite the paper.
+If you find this code useful in your research, please cite the paper:
+
+```
+@article{2018arXiv180205668P,
+   author = {{Polino}, A. and {Pascanu}, R. and {Alistarh}, D.},
+    title = "{Model compression via distillation and quantization}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1802.05668},
+ keywords = {Computer Science - Neural and Evolutionary Computing, Computer Science - Learning},
+     year = 2018,
+    month = feb,
+}
+```
+
 
 The code is written in [Pytorch](http://pytorch.org/) using Python 3.6. It is not backward compatible with Python2.x
 
