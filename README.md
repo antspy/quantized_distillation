@@ -18,7 +18,9 @@ archivePrefix = "arXiv",
 ```
 
 
-The code is written in [Pytorch](http://pytorch.org/) using Python 3.6. It is not backward compatible with Python2.x
+The code is written in [Pytorch 0.3](http://pytorch.org/) using Python 3.6. It is not backward compatible with Python2.x
+
+*Note* Pytorch 0.4 introduced some major breaking changes. To use this code, please use Pytorch 0.3.
 
 # Getting started
 
