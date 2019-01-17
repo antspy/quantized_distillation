@@ -44,8 +44,8 @@ This is a short explanation of the contents of each folder:
 The first thing to do is to import some dataset and create the train and test set loaders.
 Define a folder where you want to save all your datasets; they will be automatically downloaded and processed in the folder specified. The following example shows how to load the CIFAR10 dataset, create and train a model.
 ```python
-import dataset
-dataset.BASE_DATA_FOLDER = '/home/saved_datasets'
+import datasets
+datasets.BASE_DATA_FOLDER = '/home/saved_datasets'
 
 batch_size = 50
 cifar10 = datasets.CIFAR10() #-> will be saved in /home/saved_datasets/cifar10
