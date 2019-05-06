@@ -22,6 +22,12 @@ The code is written in [Pytorch 0.3](http://pytorch.org/) using Python 3.6. It i
 
 *Note* Pytorch 0.4 introduced some major breaking changes. To use this code, please use Pytorch 0.3.
 
+Check for the compatible version of torchvision. To run the code, use torchvision 0.2.0.
+```
+pip install torchvision==0.2.0
+```
+This should be done after installing the [requirements](requirements.txt).
+
 # Getting started
 
 ### Prerequisites
@@ -57,6 +63,7 @@ Now we can use ```train_loader``` and ```test_loader``` as generators from which
 At this point we just need to define a model and train it:
 
 ```python
+import os
 import cnn_models.conv_forward_model as convForwModel
 import cnn_models.help_fun as cnn_hf
 teacherModel = convForwModel.ConvolForwardNet(**convForwModel.teacherModelSpec,
@@ -68,12 +75,14 @@ convForwModel.train_model(teacherModel, train_loader, test_loader, epochs_to_tra
  As mentioned before, it is often better to use the ModelManager class to be able to automatically save the results and retrieve them later. So we would typically write
 
 ```python
+import os
 import cnn_models.conv_forward_model as convForwModel
 import cnn_models.help_fun as cnn_hf
 import model_manager
 cifar10Manager = model_manager.ModelManager('model_manager_cifar10.tst',
                                             'model_manager', create_new_model_manager=False)#the first time set this to True
 model_name = 'cifar10_teacher'
+cifar10modelsFolder = '~/quantized_distillation/'
 teacherModelPath = os.path.join(cifar10modelsFolder, model_name)
 teacherModel = convForwModel.ConvolForwardNet(**convForwModel.teacherModelSpec,
                                               useBatchNorm=True,
